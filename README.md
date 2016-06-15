@@ -1,8 +1,8 @@
 # Linux 정리
 
-## Docker 설치(CentOS7)
+Docker 설치(CentOS7)
 
-Docker Repository 등록
+## Docker Repository 등록
 ```
 vi /etc/yum.repos.d/docker.repo
 ```
@@ -14,18 +14,18 @@ enabled=1
 gpgcheck=1
 gpgkey=https://yum.dockerproject.org/gpg
 ```
-docker 설치
+## docker 설치
 ```
 yum install docker-engine
 ```
-서비스 등록 / 시작 / 확인
+## 서비스 등록 / 시작 / 확인
 ```
 systemctl enable docker
 systemctl start docker
 systemctl status docker
 ```
 
-docker-machine 설치
+## docker-machine 설치
 ```
 curl -L \
  https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > \
@@ -33,13 +33,24 @@ curl -L \
  && chmod +x /usr/local/bin/docker-machine \
 ```
 
-docker 실행 권한 부여
+## docker 실행 권한 부여
 ```
 usermod -aG docker (계정명)
 ```
 
-docker 버전
+## docker 버전
 ```
 docker version
 ```
 
+## docker image 확인
+```
+docker images
+```
+
+# docker image 검색 / 다운 / 삭제
+```
+docker search (검색어)
+docker pull (이미지명)
+docker rmi (이미지명)
+```
