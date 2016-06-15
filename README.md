@@ -1,8 +1,8 @@
 # Linux 정리
 
-Docker 설치(CentOS7)
+## Docker 설치(CentOS7)
 
-## Docker Repository 등록
+### Docker Repository 등록
 ```
 vi /etc/yum.repos.d/docker.repo
 ```
@@ -14,18 +14,20 @@ enabled=1
 gpgcheck=1
 gpgkey=https://yum.dockerproject.org/gpg
 ```
-## docker 설치
+### docker 설치
 ```
 yum install docker-engine
 ```
-## 서비스 등록 / 시작 / 확인
+### 서비스 등록 / 시작 / 확인
 ```
 systemctl enable docker
+
 systemctl start docker
+
 systemctl status docker
 ```
 
-## docker-machine 설치
+### docker-machine 설치
 ```
 curl -L \
  https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > \
@@ -33,22 +35,22 @@ curl -L \
  && chmod +x /usr/local/bin/docker-machine
 ```
 
-## docker 실행 권한 부여
+### docker 실행 권한 부여
 ```
 usermod -aG docker (계정명)
 ```
 
-## docker 버전
+### docker 버전
 ```
 docker version
 ```
 
-## 저장된 이미지 확인
+### 저장된 이미지 확인
 ```
 docker images
 ```
 
-## 이미지 검색/다운/삭제
+### 이미지 검색/다운/삭제
 docker search (검색어)
 docker pull (이미지명)
 docker rmi (이미지명)
@@ -61,7 +63,7 @@ docker pull centos
 docker rmi centos
 ```
 
-## 이미지 file 저장 / 읽기
+### 이미지 file 저장 / 읽기
 docker save -o (파일명) (이미지명)
 또는
 docker save (이미지명) > (파일명)
@@ -79,7 +81,7 @@ docker load -i myCentos.tar
 docker load < myCentos.tar
 ```
 
-## 컨테이너 확인
+### 컨테이너 확인
 docker ps
  -a : exit된 컨테이너 포함
  -s : 컨테이너 Size 출력
@@ -87,7 +89,7 @@ docker ps
  docker ps -a
  ```
  
- ## 컨테이너 실행
+ ### 컨테이너 실행
  docker run <옵션> <이미지 이름,ID> <명령> <매개변수>
  --name (이름)   : 컨테이너 이름
  -d, --detach      : 데몬으로 실행 (백그라운드 )
