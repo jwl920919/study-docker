@@ -5,8 +5,8 @@
 Docker Repository 등록
 ```
 vi /etc/yum.repos.d/docker.repo
-'''
-'''
+```
+```
 [dockerrepo]
 name=Docker Repository
 baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
@@ -27,7 +27,10 @@ systemctl status docker
 
 docker-machine 설치
 ```
-curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` >    /usr/local/bin/docker-machine && chmod +x /usr/local/bin/docker-machine
+curl -L \
+ https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > \
+ /usr/local/bin/docker-machine \
+ && chmod +x /usr/local/bin/docker-machine \
 ```
 
 docker 실행 권한 부여
