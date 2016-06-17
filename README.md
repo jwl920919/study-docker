@@ -91,7 +91,7 @@ docker ps -a
 
 ### 컨테이너 실행
 docker run <옵션> <이미지 이름,ID> <명령> <매개변수>
-
+```
 주요 Options
 --name (이름)     : 컨테이너 이름
 -d, --detach      : 데몬으로 실행 (백그라운드 )
@@ -110,6 +110,7 @@ docker run <옵션> <이미지 이름,ID> <명령> <매개변수>
 --volume-from     : 데이터 볼륨 컨테이너 연결 (ex. --volume-from = "data:rw" )
 -w, --workdir     : 컨테이너
 --restart always  : 재시작
+```
 ```
 docker run \
  --name myRedis \
