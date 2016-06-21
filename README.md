@@ -1,4 +1,4 @@
-# Docker 설치(on CentOS7)
+# Docker 설치(CentOS7)
 
 ### Docker Repository 등록
 ```
