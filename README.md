@@ -7,7 +7,7 @@
  - docker.repo 생성 (/etc/yum.repos.d)
  
  ```
- > vi /etc/yum.repos.d/docker.repo
+ $ vi /etc/yum.repos.d/docker.repo
  
  [dockerrepo]
  name=Docker Repository
@@ -22,24 +22,24 @@
  - docker-engine 설치
  
  ```
- > yum install docker-engine
+ $ yum install docker-engine
  ```
 
 ***3. Docker 서비스 시작***
 
  - 서비스 Enable
  ```
- > systemctl enable docker
+ $ systemctl enable docker
  ```
  
  - 서비스 시작
  ```
- > systemctl start docker
+ $ systemctl start docker
  ```
  
  - 서비스 확인
  ```
- > systemctl status docker
+ $ systemctl status docker
  ```
 
 ### Docker 주요 명령어
@@ -47,13 +47,13 @@
  - ***docker 버전***
  
  ```
- docker version
+ $ docker version
  ```
 
  - ***저장된 이미지 확인***
  
  ```
- docker images
+ $ docker images
  ```
 
  - ***이미지 검색 / 다운 / 삭제***
@@ -63,11 +63,11 @@
  docker rmi (이미지명)
  
  ```
- docker search centos
+ $ docker search centos
  
- docker pull centos
+ $ docker pull centos
  
- docker rmi centos
+ $ docker rmi centos
  ```
 
  - ***이미지 file 저장***
@@ -77,9 +77,9 @@
  docker save (이미지명) > (파일명)
 
  ```
- docker save -o myCentos.tar myCentos
+ $ docker save -o myCentos.tar myCentos
  또는
- docker save myCentos > myCentos.tar
+ $ docker save myCentos > myCentos.tar
  ```
  
  - ***이미지 file 읽기***
@@ -89,9 +89,9 @@
  docker load < (파일명)
 
  ```
- docker load -i myCentos.tar
+ $ docker load -i myCentos.tar
  또는
- docker load < myCentos.tar
+ $ docker load < myCentos.tar
  ```
 
 - ***컨테이너 확인***
@@ -99,8 +99,9 @@
  docker ps
   -a : exit된 컨테이너 포함
   -s : 컨테이너 Size 출력
+
  ```
- docker ps -a
+ $ docker ps -a
  ```
 
  - ***컨테이너 실행***
@@ -129,7 +130,7 @@
  
  예제
  ```
- docker run \
+ $ docker run \
   --name myRedis \
   -d \
   -p 6379:6379 \
