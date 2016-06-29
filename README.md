@@ -17,7 +17,7 @@
  gpgkey=https://yum.dockerproject.org/gpg
  ```
 
-***2. docker 설치***
+***2. Docker install***
 
  - docker-engine 설치
  
