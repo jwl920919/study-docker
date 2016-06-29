@@ -1,10 +1,11 @@
 # Docker 설치(CentOS7)
 
-### Docker Repository 등록
+### 1. Docker Repository 등록
+
+/etc/yum.repos.d 폴더에 docker.repo 생성
 ```
-vi /etc/yum.repos.d/docker.repo
-```
-```
+> vi /etc/yum.repos.d/docker.repo
+
 [dockerrepo]
 name=Docker Repository
 baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
