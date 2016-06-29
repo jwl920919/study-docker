@@ -141,8 +141,8 @@
 
 ### [참고] docker-machine 설치
 
- 로컬 컴퓨터 및 클라우드 서비스(ex. WAS)가 제공하는 인스턴스, 원격 서버에 도커 호스트를 구성할 수 있는 Tool.
- docker-machine을 이용하면 로컬 또는 원격의 도커에 Host를 관리(start,inspect,stop,restart, ...)할 수 있다.
+ - 로컬 컴퓨터 및 클라우드 서비스(ex. WAS)가 제공하는 인스턴스, 원격 서버에 도커 호스트를 구성할 수 있는 Tool.
+ - docker-machine을 이용하면 로컬 또는 원격의 도커에 Host를 관리(start,inspect,stop,restart, ...)할 수 있다.
 
  [docker 공식 페이지]: https://docs.docker.com/machine/overview
 
