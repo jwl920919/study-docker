@@ -150,16 +150,18 @@
  
   - Mac or Linux
   ```
-  $ curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` > /usr/local/bin/docker-machine && \
-  chmod +x /usr/local/bin/docker-machine
+  $ curl -L \
+   https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-`uname -s`-`uname -m` \
+   > /usr/local/bin/docker-machine && \
+   chmod +x /usr/local/bin/docker-machine
   ```
 
   - Windows
   ```
   $ if [[ ! -d "$HOME/bin" ]]; then mkdir -p "$HOME/bin"; fi && \
-  curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-Windows-x86_64.exe > \
-  "$HOME/bin/docker-machine.exe" && \
-  chmod +x "$HOME/bin/docker-machine.exe"
+   curl -L https://github.com/docker/machine/releases/download/v0.7.0/docker-machine-Windows-x86_64.exe \
+   > "$HOME/bin/docker-machine.exe" && \
+   chmod +x "$HOME/bin/docker-machine.exe"
   ```
 
   - Machine version 확인
