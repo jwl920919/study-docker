@@ -139,6 +139,22 @@
   redis
  ```
 
+ - ***Secure docker repository 연결***
+
+  ```
+  docker login [option] [server]
+
+  -e, --email=""
+  -p, --password=""
+  -u, --username=""
+  ```
+ 
+  * Self-hosted registry에 연결
+  ```
+  docker login <private_repo_url>
+  ```
+
+
 ### [참고] docker-machine 설치
 
  - 로컬 컴퓨터 및 클라우드 서비스(ex. WAS)가 제공하는 인스턴스, 원격 서버에 도커 호스트를 구성할 수 있는 Tool.
