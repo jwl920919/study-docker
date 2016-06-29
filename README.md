@@ -25,7 +25,7 @@
  > yum install docker-engine
  ```
 
-*** 3. Docker 서비스 시작***
+***3. Docker 서비스 시작***
 
  - 서비스 Enable
  ```
