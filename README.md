@@ -2,7 +2,7 @@
 
 ### Docker 설치
 
-***1. Docker Repository 등록 ***
+***1. Docker Repository 등록***
 
  - docker.repo 생성 (/etc/yum.repos.d)
  
