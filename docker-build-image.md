@@ -1,6 +1,6 @@
 # Docker Image build
 
-#### Entrypoint 생성
+#### 1.Entrypoint 파일 생성
 
 * 해당 Container에 접속 후 entry point 파일 생성
 
@@ -20,30 +20,33 @@ java -jar /ipm/swt-collector-0.0.1.jar --spring.config.location=/ipm/app.propert
 chmod 755 /docker-entrypoint.sh
 ```
 
-#### Commit
+#### 2.Commit (대상 Container -> Image 저장)
 
-* 실행 중인 Container를 Image로 저장
-
-  - commit
+  * commit
   
 ```
   docker commit {Target-Container} {ImageName}:{Tag}
 ```
 
-  예제
+  sample:
 ```
-docker myContainer:running newImage:0.5
+docker myContainer newImage:0.5
 ```
 
-#### 2. Build
+  * 기준 Image 생성 확인
+```
+docker images
+```
 
-* Dockerfile 파일 생성
+#### 2. Image Build
+
+  * Dockerfile 파일 생성
 
 ```
 vi Dockerfile
 ```
 
-Sample:
+  Sample:
 ```
 FROM newImage:0.5
 MAINTAINER songagi <songagi@gmail.com>
@@ -58,7 +61,7 @@ EXPOSE 514/udp
 ENTRYPOINT ["/docker-entrypoint.sh", "-D", "FOREGROUD"]
 ```
 
-* Build
+  * Build (Dockerfile 기준으로 신규 Image 생성)
 
   docker build --tag {ImageName}:{Tag} {Dockerfile경로}
   
@@ -87,7 +90,7 @@ Step 6 : ENTRYPOINT /docker-entrypoint.sh -D FOREGROUD
 Successfully built 6b7f5d94188c
 ```
 
-* 생성된 Image 확인
+  * 신규 Image 생성 확인
 ```
 docker images
 ```
