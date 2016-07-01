@@ -2,10 +2,10 @@
 
 #### 1.Entrypoint 파일 생성
 
-  * 해당 Container에 entry-point 파일 생성 (Container)
+  * 해당 Container root에 docker-entrypoint.sh 파일 생성
 
 ```
-$ vi /docker-entrypoint.sh
+Container$ vi /docker-entrypoint.sh
 ```
 
   Sample:
@@ -15,15 +15,23 @@ $ vi /docker-entrypoint.sh
 java -jar /ipm/swt-collector-0.0.1.jar --spring.config.location=/ipm/app.properties
 ```
 
-  - 실행 권한 추가 (Container)
+  - 실행 권한 추가
 
 ```
-$ chmod 755 /docker-entrypoint.sh
+Container$ chmod 755 /docker-entrypoint.sh
 ```
 
 #### 2. Commit
 
-  * commit: 대상 Container -> 기준 Image로 저장
+ * 대상 Container 중지
+ 
+```
+$ docker stop {Target-Container}
+```
+
+ * commit 
+ 
+ * 대상 Container를 Image로 저장
   
 ```
 $ docker commit {Target-Container} {ImageName}:{Tag}
