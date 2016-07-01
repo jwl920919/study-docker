@@ -107,3 +107,10 @@
     --restart always \
     google/cadvisor:latest
   ```
+
+ * 접속
+ ```
+ http://{SERVER-IP}:8080
+ ```
+ 
+ 
