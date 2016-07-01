@@ -1,4 +1,4 @@
-# 주요 Docker Container 정리
+# Docker 주요 Container 정리
 
 #### Redis 설치
 
