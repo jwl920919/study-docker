@@ -5,7 +5,7 @@
 * 해당 Container에 접속 후, entry-point 파일 생성
 
 ```
-Container$ vi /docker-entrypoint.sh
+(Container)$ vi /docker-entrypoint.sh
 ```
 
   Sample:
@@ -17,7 +17,7 @@ java -jar /ipm/swt-collector-0.0.1.jar --spring.config.location=/ipm/app.propert
 
   - 실행 권한 추가
 ```
-Container$ chmod 755 /docker-entrypoint.sh
+(Container)$ chmod 755 /docker-entrypoint.sh
 ```
 
 #### 2.Commit (대상 Container -> Image 저장)
