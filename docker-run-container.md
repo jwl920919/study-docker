@@ -61,7 +61,8 @@
   
   ```
   vi /db_data/pgdata/postgresql.conf
-  
+  ```
+  ```
   # "local" is for Unix domain socket connections only
   local   all             all                                     trust
   # IPv4 local connections:
@@ -79,7 +80,8 @@
   
   ```
   vi /db_data/pgdata/postgresql.conf
-
+  ```
+  ```
   # optionally set the following
   # it will tighten security by only allowing the host to connect
   # listen_addresses = '*'
