@@ -2,10 +2,10 @@
 
 #### Redis 설치
 
-```cmd
+```linux
 docker pull redis
 ```
-```cmd
+```linux
 docker run \
  --name myRedis \
  -d \
