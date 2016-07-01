@@ -2,18 +2,18 @@
 
 #### Redis 설치
 
- ```
- docker pull redis
- ```
- ```
- docker run \
-  --name myRedis \
-  -d \
-  -p 6379:6379 \
-  -e REDIS_PASS=$password \
-  --restart always \
-  redis
- ```
+```shell
+docker pull redis
+```
+```shell
+docker run \
+ --name myRedis \
+ -d \
+ -p 6379:6379 \
+ -e REDIS_PASS=$password \
+ --restart always \
+ redis
+```
 
 #### RabbitMQ 설치
  
