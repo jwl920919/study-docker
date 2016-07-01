@@ -2,10 +2,10 @@
 
 #### 1.Entrypoint 파일 생성
 
-* 해당 Container에 접속 후 entry point 파일 생성
+* 해당 Container에 접속 후, entry-point 파일 생성
 
 ```
-vi /docker-entrypoint.sh
+Container$ vi /docker-entrypoint.sh
 ```
 
   Sample:
@@ -17,7 +17,7 @@ java -jar /ipm/swt-collector-0.0.1.jar --spring.config.location=/ipm/app.propert
 
   - 실행 권한 추가
 ```
-chmod 755 /docker-entrypoint.sh
+Container$ chmod 755 /docker-entrypoint.sh
 ```
 
 #### 2.Commit (대상 Container -> Image 저장)
@@ -25,17 +25,17 @@ chmod 755 /docker-entrypoint.sh
   * commit
   
 ```
-  docker commit {Target-Container} {ImageName}:{Tag}
+$ docker commit {Target-Container} {ImageName}:{Tag}
 ```
 
   sample:
 ```
-docker myContainer newImage:0.5
+docker myContainer myImage:0.5.10
 ```
 
   * 기준 Image 생성 확인
 ```
-docker images
+$ docker images
 ```
 
 #### 2. Image Build
@@ -43,12 +43,12 @@ docker images
   * Dockerfile 파일 생성
 
 ```
-vi Dockerfile
+$ vi Dockerfile
 ```
 
   Sample:
 ```
-FROM newImage:0.5
+FROM myImage:0.5.10
 MAINTAINER songagi <songagi@gmail.com>
 
 RUN yum update
@@ -66,11 +66,11 @@ ENTRYPOINT ["/docker-entrypoint.sh", "-D", "FOREGROUD"]
   docker build --tag {ImageName}:{Tag} {Dockerfile경로}
   
 ```
-docker build --tag newImage:0.5.1 .
+$ docker build --tag myImage:0.6 .
 ```
 
 ```
-Step 1 : FROM newImage:0.5
+Step 1 : FROM myImage:0.5.10
  ---> 5f3d29f0c533
 Step 2 : MAINTAINER songagi <songagi@gmail.com>
  ---> Using cache
@@ -92,11 +92,17 @@ Successfully built 6b7f5d94188c
 
   * 신규 Image 생성 확인
 ```
-docker images
+$ docker images
 ```
 
 #### 3. 신규 이미지 실행
 
+  * Container 실행
 ```
-docker run -d --name newContainer -v /logs:/logs -p 80:80 -p 514:514/udp newImage:0.5.1
+$ docker run -d --name newContainer -v /logs:/logs -p 80:80 -p 514:514/udp myImage:0.6
+```
+
+  * Container 접속
+```
+$ docker exec -it newContainer /bin/bash
 ```
