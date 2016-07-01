@@ -3,9 +3,11 @@
 #### Redis
 
   * redis image 다운 / 실행
+  
   ```
   docker pull redis
   ```
+  
   ```
   docker run \
    --name myRedis \
