@@ -5,7 +5,6 @@
  ```
  docker pull redis
  ```
-  
  ```
  docker run \
   --name myRedis \
@@ -21,7 +20,6 @@
  ```
  docker pull rabbitmq
  ```
-
  ```
  docker run \
   --name=myRabbitmq \
@@ -39,7 +37,6 @@
   ```
   docker pull postgres
   ```
-  
   ```
   docker run \
     --name=myPostgres \
@@ -88,7 +85,7 @@
   ```
   
   * 재시작
-  * 
+   
   ```
   docker start myPostgres
   ```
@@ -98,7 +95,6 @@
  ```
  docker pull google/cadvisor
  ```
-
  ```
  docker run \
    --name=cAdvisor \
