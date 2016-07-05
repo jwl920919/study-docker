@@ -103,8 +103,8 @@
  ```
  $ docker ps -a
  ```
-
- - ***컨테이너 실행***
+ 
+  - ***컨테이너 실행***
 
  docker run <옵션> <이미지 이름,ID> <명령> <매개변수>
  ```
@@ -139,7 +139,33 @@
   redis
  ```
 
- - ***Secure docker repository 연결***
+- ***컨테이너 접속/끊기***
+
+ - 끊기:  Ctrl p + Ctrl q
+ 
+
+ - 접속:
+ ```
+ docker attach <Container>
+ ```
+
+- ***컨테이너 정보***
+ 
+세부 정보
+
+ ```
+ docker inspect <Container>
+ ```
+ 
+ 로그
+
+ ```
+ docker logs <Container>
+ ```
+ 
+ 
+
+- ***Secure docker repository 연결***
 
   ```
   docker login [option] [server]
