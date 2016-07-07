@@ -1,3 +1,4 @@
+[Back](https://github.com/songagi/study-docker/blob/master/README.md)
 
 # Container log 삭제
 
@@ -20,3 +21,5 @@ chmod 755 docker-logs-clean.sh
 ```
 sudo ./docker-logs-clean <container>
 ```
+
+[Back](https://github.com/songagi/study-docker/blob/master/README.md)
