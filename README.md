@@ -7,4 +7,4 @@
 
 [3. Image build 방법](https://github.com/songagi/study-docker/blob/master/%5Bdocker%5D%20build_image.md)
 
-[4. Container log 삭제] (https://github.com/songagi/study-docker/blob/master/%5Bdocker%5D%20clear_container_logs.md)
+[4. Container log 삭제](https://github.com/songagi/study-docker/blob/master/%5Bdocker%5D%20clear_container_logs.md)
