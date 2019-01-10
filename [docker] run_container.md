@@ -59,6 +59,23 @@ docker run \
  rabbitmq:3-management
 ```
 
+#### Oralce 설치 (2019-01-10)
+
+```
+docker pull sath89/oracle-12c
+```
+
+* 실행
+```
+docker run -d -p 8080:8080 -p 1521:1521 -v /oraData/data:/u01/app/oracle sath89/oracle-12c
+```
+
+* with DBCA_TOTAL_MEMORY 설정
+```
+docker run -d -p 8080:8080 -p 1521:1521 -v /oraData/data:/u01/app/oracle -e DBCA_TOTAL_MEMORY=1024 sath89/oracle-12c
+```
+
+
 #### PostgresSQL 설치
 
 ```
