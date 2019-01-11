@@ -44,6 +44,12 @@
  $ systemctl status docker
  ```
 
+### docker 실행 권한 주기
+```
+sudo gpasswd -a <사용자ID> docker
+```
+
+
 ### Docker 주요 명령어
 
  - ***docker 버전***
